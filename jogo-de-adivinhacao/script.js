@@ -51,14 +51,14 @@ function conferirPalpite() {
   envioPalpite.disabled = true;
   botaoReinicio = document.createElement("button");
   botaoReinicio.textContent = "Iniciar novo jogo";
-  document.body.appendChild(botaoReinicio);
+  document.querySelector("main").appendChild(botaoReinicio);
   botaoReinicio.addEventListener("click", reiniciarJogo);
 }
 
 function reiniciarJogo() {
   contagemPalpites = 1;
 
-  var reiniciarParas = document.querySelectorAll(".resultadoParas p");
+  var reiniciarParas = document.querySelectorAll(".resultParas p");
   for (var i = 0; i < reiniciarParas.length; i++) {
     reiniciarParas[i].textContent = "";
   }
