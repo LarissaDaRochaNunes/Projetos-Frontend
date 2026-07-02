@@ -18,6 +18,10 @@ section{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.365);
 }
 
+.button{
+    background-color: rgba(16, 78, 211, 0.762);
+}
+
 #res img{
     width: 250px;
     height: 250px;
