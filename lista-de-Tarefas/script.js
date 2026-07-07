@@ -1,29 +1,35 @@
-function adicionarTarefa() {
+let tarefas = []
 
-    //recebe valor do input do usuário
+function adicionarTarefa() {
     const inputTarefa = document.getElementById("inputTarefa")
     let tarefa = inputTarefa.value.trim()
 
     const mensagem = document.getElementById("mensagem")
 
-    //Se o usuário não digitar nada
     if (tarefa == ""){
         let mensagemErro = "Erro: Digite uma  tarefa para adiciona-lá  a sua lista!"
         mensagem.textContent = mensagemErro
         mensagem.style.color = "#a34743"
     }else{
-        //cria novo item (li) e insere na (lista ul)
-        const listaTarefas = document.getElementById("listaTarefas")
-        let novaTarefa = document.createElement("li")
-        novaTarefa.textContent = tarefa
-        listaTarefas.appendChild(novaTarefa)
-
-        //mensagem de tarefa adicionada com sucesso
         let mensagemSucesso = "Tarefa adicionada com sucesso!"
         mensagem.textContent = mensagemSucesso
         mensagem.style.color = "#28a745"
+
+        tarefas.push(tarefa)
+        renderizarTarefas()
     }
 
-    //limpa o input do usuário
     inputTarefa.value = ""
+}
+
+function renderizarTarefas(){
+    const listaTarefas = document.getElementById("listaTarefas")
+    listaTarefas.innerHTML = ""
+    let i = 0
+    for (i;i < tarefas.length; i++){
+        let novaTarefa = document.createElement("li")
+        novaTarefa.textContent = tarefas[i]
+        listaTarefas.appendChild(novaTarefa)
+    }
+
 }
