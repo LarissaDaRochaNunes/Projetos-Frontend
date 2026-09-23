@@ -1,0 +1,142 @@
+:root{
+    --bg-main: #f4f6f8;
+    --card-bg: #FFFFFF;
+    --primary-color: #5B92E5;
+    --primary-hover: #4A81D4;
+    --text-primary: #1F2937;
+    --text-secondary: #6B7280;
+    --danger-color: #EF4444;
+    --success-bg: #D1FAE5;
+    --success-text: #059669;
+    --border-radius: 12px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-container {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 400px;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.app-header h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.input-group{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.input-group input{
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--border-radius);
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.input-group input:focus{
+    border-color: var(--primary-color);
+}
+
+.input-group button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.input-group button:hover {
+    background-color: var(--primary-hover);
+}
+
+.task-counter {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background-color: #F9FAFB;
+    border-radius: var(--border-radius);
+    border: 1px solid #E5E7EB;
+    transition: all 0.3s ease;
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-check {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--text-secondary);
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger-color);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.task-item.completed {
+    background-color: var(--success-bg);
+    border-color: transparent;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: var(--success-text);
+}
+
+.task-item.completed .btn-check {
+    background-color: var(--success-text);
+    border-color: var(--success-text);
+}
