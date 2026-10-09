@@ -41,6 +41,16 @@ nav{
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 768px){
+    .logo{
+        padding: 10px;
+    }
+
+    .github{
+        padding: 10px;
+    }
+}
+
 .menu{
     display: flex;
     flex-direction: row;
