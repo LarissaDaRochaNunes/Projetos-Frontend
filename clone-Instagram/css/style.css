@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+
+main{
+    border-left: 3px solid #dbdbdb;
+    padding: 50px;
+}
+
+.container{
+    display: flex;
+}
+
+.logo-instagram{
+    width: 60px;
+    height: 60px;
+}
+
+.cabecalho{
+    margin: 50px;
+}
+
+.cabecalho p{
+    font-size: 37px;
+    text-align: center;
+    margin-top: 50px;
+    padding-left: 45px;
+}
+
+#cor-diferente{
+    background: linear-gradient(to right, #FF5E3A, #FF007A, #C800C7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.img-principal{
+    text-align: center;
+}
+
+.img-principal img{
+    width: 100%;
+    max-width:450px;
+    height: auto;
+}
+
+.facebook img{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+}
+
+.facebook a{
+    display: inline;
+    text-decoration: none;
+    font-size: 14px;
+    color: #262626;
+
+}
+
+.facebook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 550px;
+    height: 45px;
+    margin-top: 60px;
+    background-color: #f4f9fc;
+    cursor: pointer;
+}
+
+.facebook:hover, .esq-senha:hover{
+    background-color:#dbdbdb ;
+}
+
+form h1{
+    display: block;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    font-size: 16px;
+
+}
+
+form input{
+    display: block;
+    border-radius: 20px;
+    margin: 8px 0;
+    border: 1px solid #dbdbdb;
+    width: 100%;
+    max-width: 550px;
+    height: 60px;
+    text-align:left;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+form input[type="submit"]{
+    background-color: #a3d1ef;
+    height: 45px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    border-radius: 50px;    
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.esq-senha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 550px;
+    height: 45px;
+    border-radius: 50px;
+
+}
+
+.esq-senha a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+button{
+    margin-top: 15px;
+    color: #0d81ce;
+    font-weight: bold;
+    background-color: transparent;
+    text-align: center;
+    border: 1px solid #0d81ce;
+    width: 550px;
+    height: 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    
+}
+
+.footer-links, .idioma-copy{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 8px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer-links{
+    border-top: 1px solid #dbdbdb;
+}
+
+li a, .idioma-copy{
+    text-decoration: none;
+    color: #7a7979;
+    font-size: 11px;
+}
+
+@media (max-width: 768px) {
+    header {
+        display: none;
+    }
+    button{
+        width: 100%;
+    }
+    main{
+        margin: 0 auto;
+        border-left: none;
+        padding: 20px 15px;
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
